@@ -18,7 +18,7 @@ class LoggedPostcode(TimeStampedModel):
     def __str__(self):
         return "{0}".format(self.postcode)
 
-def log_postcode(log_dict, blocking=False):
+def log_postcode(log_dict, blocking=True):
     """
     Take a dict with all the kwargs needed to create a LoggedPostcode
     model and create it or add it to a queue to save later
