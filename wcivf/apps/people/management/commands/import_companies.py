@@ -87,10 +87,11 @@ class Command(BaseCommand):
         if data.role_resigned_date:
             resigned = date_from_string(data.role_resigned_date)
 
-        company.company_name   = data.company_name,
-        company.company_status = data.company_status
-        company.role           = data.role
+        company.company_name        = data.company_name
+        company.company_status      = data.company_status
+        company.role                = data.role
         company.role_appointed_date = appointed
+
         if resigned:
             company.role_resigned_date = resigned
         company.save()
